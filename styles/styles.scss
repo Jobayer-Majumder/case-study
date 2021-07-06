@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import "./shared/mixins";
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    // h1,
+    // h2,
+    // h3,
+    // p{
+    //     margin: 0;
+    //     padding: 0;
+    // }
+}
+// main{
+//     height: 100vh;
+// }
+.main-container{
+    @include container()
+}
+
+.row{
+    @include row()
+}
+
+.img{
+    background: #eee;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+
+        width: 80%;
+        height: auto;
+    }
+}
+.desc{
+    padding: 0 8px;
+    border: 1px solid burlywood;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+}
+
+.title{
+    div{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: chocolate;
+        border-radius: 5px;
+    }
+}

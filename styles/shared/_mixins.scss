@@ -1,0 +1,11 @@
+@mixin container() {
+    width: 90%;
+    margin: 0 auto;
+    // background: $background;
+}
+
+@mixin row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
