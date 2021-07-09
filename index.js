@@ -30,4 +30,4 @@ app.get('/', (req, res) => {
     res.send('server running')
 })
 
-app.listen(PORT || process.env.PORT, () => console.log('server is running on'))
+app.listen(process.env.PORT || PORT, () => console.log('server is running on'))
