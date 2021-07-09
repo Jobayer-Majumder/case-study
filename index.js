@@ -2,12 +2,12 @@ const express = require('express')
 const app = express();
 const cors = require('cors');
 const { MongoClient } = require('mongodb');
-require('dotenv').config({ path: './.env' })
+require('dotenv').config();
 
 app.use(cors());
 app.use(express.json());
 
-const PORT = 5000;
+const port = 5000;
 
 
 const uri = `mongodb+srv://${process.env.DB_USER_NAME}:${process.env.DB_USER_PASS}@jobayer.eggfq.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
@@ -30,4 +30,4 @@ app.get('/', (req, res) => {
     res.send('server running')
 })
 
-app.listen(process.env.PORT || PORT, () => console.log('server is running on'))
+app.listen(process.env.PORT || port, () => console.log('server is running on'))
