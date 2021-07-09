@@ -1,11 +1,16 @@
 @mixin container() {
     width: 90%;
     margin: 0 auto;
-    // background: $background;
 }
 
-@mixin row {
+@mixin row ($repeating){
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat($repeating, 1fr);
+    grid-gap: 20px;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

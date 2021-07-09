@@ -6,23 +6,58 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    // h1,
-    // h2,
-    // h3,
-    // p{
-    //     margin: 0;
-    //     padding: 0;
-    // }
+    img {
+        width: 100%;
+    }
+    li{
+        list-style-type: none;
+    }
 }
 // main{
 //     height: 100vh;
 // }
-.main-container{
+.container{
     @include container()
 }
 
 .row{
-    @include row()
+    @include row(2);
+    padding: 50px 0;
+}
+.row-1{
+    @include row(4)
+}
+.row-2{
+    @include flexCenter();
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+li{
+    display: inline;
+    margin: 5px;
+}
+.menu{
+    @include flexCenter();
+    input{
+        padding: 12px 5px;
+        width: 90%;
+        border-radius: 5px;
+        border: 1px solid lightblue;
+        &:focus{
+            outline: none;
+            width: 100%;
+            transition: 1s ease-in-out;
+        }
+    }
+}
+
+.logo{
+    width: 30%;
+    img{
+        width: 150px;
+        height: auto;
+    }
 }
 
 .img{
@@ -37,22 +72,85 @@ body{
         height: auto;
     }
 }
-.desc{
+.pd-detail{
     padding: 0 8px;
-    border: 1px solid burlywood;
     color: gray;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    // align-items: center;
+    h4{
+        margin: 0;
+    }
+    .empty{
+        width: 100%;
+        height: 60px;
+        margin-top: 5px;
+        background-color: #eee;
+        border-radius: 5px;
+    }
+}
+.description{
+    h3{
+        margin: 0;
+        padding: 5px 0;
+    }
+    p{
+        margin: 0;
+        padding: 3px 0;
+    }
 }
 
 .title{
+    h2{
+        margin: 0;
+        // padding: 1px 0;
+    }
+    p{
+        margin: 0;
+        padding: 4px 0;
+    }
     div{
         display: inline-block;
         width: 30px;
         height: 30px;
         background: chocolate;
         border-radius: 5px;
+    }
+}
+
+.see-more{
+    background-color: #eee;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+$small: 600px;
+$medium: 1100px;
+
+
+@media screen and (max-width: $small) {
+    .row{
+        @include row(1);
+    }  
+    .logo{
+        width: 100%;
+    }
+    .row-2{
+        @include row(1);
+        text-align: center
+    }
+    .menu{
+        @include row(1);
+    }
+    .menu-link{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: $medium) {
+    .menu{
+        // @include flexCenter();
+        flex-direction: column-reverse;
+        input{
+            width: 100%;
+        }
     }
 }

@@ -1,0 +1,39 @@
+
+[    
+    {
+        "id": 1,
+        "imgUrl": "./assets/images/New Project (3).png",
+        "title": "Tiger Medium Red",
+        "price": "",
+        "availableSizes": [],
+        "colors": [],
+        "description": "Opt for a bold look with this T-shirt. With it's iconic tiger print on the chest, it's sure  to turn heads pair it with jogging trousers and sneakers for a casual sportswear look."
+    },
+    {
+        "id": 2,
+        "imgUrl": "./assets/images/white t-shirt.png",
+        "title": "Tiger White T-shirt",
+        "price": "",
+        "availableSizes": [],
+        "colors": [],
+        "description": "Opt for a bold look with this T-shirt. With it's iconic tiger print on the chest, it's sure  to turn heads pair it with jogging trousers and sneakers for a casual sportswear look."
+    },
+    {
+        "id": 3,
+        "imgUrl": "./assets/images/blue t-shirt.png",
+        "title": "Tiger Blue T-shirt",
+        "price": "",
+        "availableSizes": [],
+        "colors": [],
+        "description": "Opt for a bold look with this T-shirt. With it's iconic tiger print on the chest, it's sure  to turn heads pair it with jogging trousers and sneakers for a casual sportswear look."
+    },
+    {
+        "id": 4,
+        "imgUrl": "./assets/images/black t-shirt.png",
+        "title": "Tiger Black T-shirt",
+        "price": "",
+        "availableSizes": [],
+        "colors": [],
+        "description": "Opt for a bold look with this T-shirt. With it's iconic tiger print on the chest, it's sure  to turn heads pair it with jogging trousers and sneakers for a casual sportswear look."
+    }
+]
