@@ -13,9 +13,7 @@ body{
         list-style-type: none;
     }
 }
-// main{
-//     height: 100vh;
-// }
+
 .container{
     @include container()
 }
@@ -100,7 +98,6 @@ li{
 .title{
     h2{
         margin: 0;
-        // padding: 1px 0;
     }
     p{
         margin: 0;
@@ -147,7 +144,6 @@ $medium: 1100px;
 
 @media screen and (max-width: $medium) {
     .menu{
-        // @include flexCenter();
         flex-direction: column-reverse;
         input{
             width: 100%;

@@ -23,7 +23,6 @@ body li {
 .row {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   padding: 50px 0;
@@ -32,7 +31,6 @@ body li {
 .row-1 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
 }
@@ -164,7 +162,6 @@ li {
   .row {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
   }
@@ -174,7 +171,6 @@ li {
   .row-2 {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
     text-align: center;
@@ -182,7 +178,6 @@ li {
   .menu {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
   }

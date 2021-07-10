@@ -1,12 +1,11 @@
-const pdImg = document.getElementById('pdImg');
 
 
-const getData = () => {
-        fetch(`../productData.json`)
-                .then(res => res.json())
-                .then(data => showData(data))
-}
-getData()
+
+fetch(`https://gentle-anchorage-42278.herokuapp.com/getProduct`)
+        .then(res => res.json())
+        .then(pd => {
+                showData(pd)
+        })
 
 const showData = data => {
         const seeMoreParent = document.getElementById('see-more')
@@ -22,18 +21,21 @@ const showData = data => {
 }
 
 const getSingleProduct = id => {
-        fetch(`../productData.json`)
+        fetch(`https://gentle-anchorage-42278.herokuapp.com/getProduct`)
                 .then(res => res.json())
                 .then(data => {
                         const singlePd = data.find(data => data.id === id)
                         productDetails(singlePd)
                 })
-        
+
 }
 
 const productDetails = data => {
+        const pdImg = document.getElementById('pdImg');
         pdImg.src = data.imgUrl
-        console.log(pdImg.src)
-
-
+        let title = document.getElementById('pd-title');        
+        title.innerText = data.title
+        let pdPrice = document.getElementById('pd-price');        
+        pdPrice.innerText = `AED ${data.price}`
 }
+

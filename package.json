@@ -1,0 +1,23 @@
+{
+  "name": "challhoub-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jobayer-Majumder/case-study.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jobayer-Majumder/case-study/issues"
+  },
+  "homepage": "https://github.com/Jobayer-Majumder/case-study#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
