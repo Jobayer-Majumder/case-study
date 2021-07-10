@@ -1,4 +1,5 @@
 import React from 'react';
+import ApiCall from '../apiCall/ApiCall';
 
 
 const ProductDetails = () => {
@@ -6,13 +7,14 @@ const ProductDetails = () => {
     const [loadingShimmer, setLoadingShimmer] = React.useState(true);
 
     React.useEffect(() => {
-        fetch(`https://gentle-anchorage-42278.herokuapp.com/getProduct`)
-            .then(res => res.json())
-            .then(pd => {
-                const specificPd = pd.find(pd => pd.id === 1)
-                setProduct(specificPd)
-                setLoadingShimmer(false)
-            })
+            const api = async () => {
+                const response = new ApiCall();
+                const pd = await response.api();
+                const specificPd = pd.find(pd => pd.id === 1);
+                setProduct(specificPd);
+                setLoadingShimmer(false);
+            }
+            api();
     }, []);
 
     return (
@@ -38,7 +40,7 @@ const ProductDetails = () => {
                                     <img src={product?.imgUrl} alt="" className='w-3/4' />
                                 </div>
                                 <div className="p-1 text-gray-500">
-                                    <h1 className='text-2xl py-2'>{product?.title}</h1>
+                                    <h1 className='text-2xl py-2' data-testid='title'>{product?.title}</h1>
                                     <h1>AED {product?.price}</h1>
                                     <h3 className='py-5'>Available Sizes {product?.availableSizes.map(s => <span className='px-2' key={Math.random()}>{s}</span>)}</h3>
                                     <h3>Colors</h3>

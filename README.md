@@ -26,3 +26,10 @@ Site is hosted on netlify: https://pedantic-fermat-e48990.netlify.app
 * web-vitals
 * craco
 * tailwind
+
+
+### Testing
+only api tested by `@testing-library/jest-dom`.
+
+### Running test
+Go to the terminal and write the `npm test` command.
